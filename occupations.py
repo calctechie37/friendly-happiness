@@ -24,6 +24,9 @@ def readFile():
         
 def getOccupation():
     classPercentages = readFile()
+    if classPercentages is None:
+        print "Error generating dictionary"
+        raise SystemExit(0)
     choice = 100 * random()
     beginningValue = 0
     for i in classPercentages:
